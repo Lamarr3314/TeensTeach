@@ -1,0 +1,9 @@
+#mainImage {
+  width: 1000px;
+}
+html {
+  background-color: black;
+}
+#mainImage {
+  box-shadow: rgba(14, 230, 230, 0.2) 0px 60px 40px -7px;
+}
