@@ -1,9 +1,131 @@
+:root {
+  --background: #242121ff;
+  --TeensTeachBlue: #1ba8e9;
+}
 #mainImage {
-  width: 1000px;
+  width: 800px;
 }
 html {
-  background-color: black;
+  background-color: var(--background);
 }
 #mainImage {
-  box-shadow: rgba(14, 230, 230, 0.2) 0px 60px 40px -7px;
+  box-shadow: rgba(14, 230, 230, 0.2) 2px 70px 50px -7px;
+  border-radius: 70000px;
+  /* border-color: transparent;
+  background-color: transparent;
+  color: transparent; */
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 1000px;
+  width: 1000px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: spin 8s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  backdrop-filter: blur(2.1em);
+}
+.container:after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 50%;
+  /* background-image: url(); */
+  top: 25%;
+  left: 25%;
+  border-radius: 50%;
+}
+.container div {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  animation: scale-up infinite;
+}
+@keyframes scale-up {
+  50% {
+    transform: scale(1.8);
+  }
+}
+.container div:nth-child(1) {
+  height: 90%;
+  width: 100%;
+  background-color: var(--background);
+  left: -5%;
+  top: -5%;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+.container div:nth-child(2) {
+  height: 80%;
+  width: 70%;
+  background-color: var(--background);
+  top: 15%;
+  right: -15%;
+  animation-duration: 10s;
+  animation-delay:3s;
+}
+.container div:nth-child(3) {
+  height: 65%;
+  width: 80%;
+  background-color: var(--background);
+  bottom: -30%;
+  right: -20%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+.container div:nth-child(4) {
+  height: 50%;
+  width: 75%;
+  background-color: var(--background);
+  bottom: -5%;
+  left: 8%;
+  animation-duration: 7s;
+  animation-delay: 6s;
+}
+.container div:nth-child(5) {
+  height: 45%;
+  width: 55%;
+  background-color: var(--background);
+  top: 50%;
+  left: 0;
+  animation-duration: 2.5s;
+  animation-delay: 4s;
+}
+.container div:nth-child(6) {
+  height: 25%;
+  width: 55%;
+  background-color: var(--TeensTeachBlue);
+  top: 45%;
+  left: -15%;
+  animation-duration: 9s;
 }
