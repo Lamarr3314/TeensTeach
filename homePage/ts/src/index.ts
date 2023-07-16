@@ -1,0 +1,13 @@
+const screenWidth = screen.width;
+const screenHeight = screen.height;
+let mainImage = <HTMLElement>document.getElementById('mainImage');
+let imageBorder = <HTMLElement>document.querySelector('.container');
+let background = <HTMLElement>document.querySelector('.backShadow');
+const imageHeight = screenHeight / 2;
+const borderHeight = imageHeight + 100;
+mainImage.style.height = imageHeight + " px";
+mainImage.style.width = imageHeight + " px";
+imageBorder.style.width = borderHeight + "px";
+imageBorder.style.height = borderHeight + "px";
+background.style.height = borderHeight + "px";
+background.style.width = borderHeight + "px";

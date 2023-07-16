@@ -1,0 +1,13 @@
+var screenWidth = screen.width;
+var screenHeight = screen.height;
+var mainImage = document.getElementById('mainImage');
+var imageBorder = document.querySelector('.container');
+var background = document.querySelector('.backShadow');
+var imageHeight = screenHeight / 2;
+var borderHeight = imageHeight + 100;
+mainImage.style.height = imageHeight + " px";
+mainImage.style.width = imageHeight + " px";
+imageBorder.style.width = borderHeight + "px";
+imageBorder.style.height = borderHeight + "px";
+background.style.height = borderHeight + "px";
+background.style.width = borderHeight + "px";
